@@ -106,6 +106,7 @@ function App() {
 						)}
 						<Route path="/rand-menu" element={<RandMenu />} />
 						<Route path="/club/:club" element={<Club />} />
+						<Route path="/*" element={<Navigate to="/" />} />
 					</Routes>
 				) : (
 					<Routes id="page-login-false">
