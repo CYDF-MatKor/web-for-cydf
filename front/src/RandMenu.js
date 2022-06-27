@@ -1,5 +1,5 @@
 import "./RandMenu.css";
-function RandMenu(props) {
+function RandMenu() {
 	return (
 		<div className="RandMenu-page">
 			<h1>RandMenu</h1>
