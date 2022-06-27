@@ -6,15 +6,14 @@ function App() {
 	return (
 		<div className="App">
 			<div id="navbar"></div>
-			<div id="page">
-				<Routes>
-					{/* <Route path="/" element={<Home />} />
+			<Routes id="page">
+				{/* <Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} /> */}
-				</Routes>
-			</div>
+			</Routes>
 		</div>
 	);
 }
 
 export default App;
+
