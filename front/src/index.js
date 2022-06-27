@@ -18,6 +18,8 @@ export { default as AcademicCalendar } from "./AcademicCalendar";
 export { default as Busasu } from "./Busasu";
 export { default as RandMenu } from "./RandMenu";
 export { default as Club } from "./Club";
+export { default as Login } from "./Login";
+export { default as Signup } from "./Signup";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
