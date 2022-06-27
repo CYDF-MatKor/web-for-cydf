@@ -19,12 +19,15 @@ import {
 	ProfessorTier,
 	AcademicCalendar,
 	Busasu,
+	RandMenu,
 	Club,
+	Login,
+	Signup,
 } from ".";
 
 function App() {
-	const [isLoggedIn, setIsLoggedIn] = useState(true);
-	const [isPaid, setIsPaid] = useState(true);
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [isPaid, setIsPaid] = useState(false);
 	return (
 		<div className="App">
 			<div id="navbar">Navbar</div>
@@ -102,15 +105,16 @@ function App() {
 								element={<Busasu />}
 							/>
 						)}
-						{/* <Route path="/rand-menu" element={<RandMenu />} /> */}
+						<Route path="/rand-menu" element={<RandMenu />} />
 						<Route path="/club/:club" element={<Club />} />
 					</Routes>
-				) : // <Routes id="page-login-false">
-				// 	<Route path="/login" element={<Login />} />
-				// 	<Route path="/signup" element={<Signup />} />
-				// 	<Route path="/*" element={<Navigate to="/login" />} />
-				// </Routes>
-				null}
+				) : (
+					<Routes id="page-login-false">
+						<Route path="/login" element={<Login />} />
+						<Route path="/signup" element={<Signup />} />
+						<Route path="/*" element={<Navigate to="/login" />} />
+					</Routes>
+				)}
 			</div>
 		</div>
 	);
