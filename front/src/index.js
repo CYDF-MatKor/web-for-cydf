@@ -8,6 +8,10 @@ export { default as About } from "./About";
 export { default as Contact } from "./Contact";
 export { default as Error } from "./Error";
 export { default as Terms } from "./Terms";
+export { default as Home } from "./Home";
+export { default as Mypage } from "./Mypage";
+export { default as Timetable } from "./Timetable";
+export { default as Grade } from "./Grade";
 export { default as Lecture } from "./Lecture";
 export { default as LectureInfo } from "./LectureComponent/LectureInfo";
 export { default as LecturePastexam } from "./LectureComponent/LecturePastexam";
@@ -31,4 +35,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-

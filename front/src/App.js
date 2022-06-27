@@ -7,6 +7,10 @@ import {
 	Contact,
 	Error,
 	Terms,
+	Home,
+	Mypage,
+	Timetable,
+	Grade,
 	Lecture,
 	LectureInfo,
 	LecturePastexam,
@@ -33,11 +37,11 @@ function App() {
 				</Routes>
 				{isLoggedIn ? (
 					<Routes id="page-login-true">
-						{/* <Route path="/" element={<Home />} />
+						<Route path="/" element={<Home />} />
 						<Route path="/home" element={<Home />} />
 						<Route path="/mypage" element={<Mypage />} />
 						<Route path="/timetable" element={<Timetable />} />
-						<Route path="/grade" element={<Grade />} /> */}
+						<Route path="/grade" element={<Grade />} />
 						<Route
 							path="/lecture/description"
 							element={<Lecture />}
@@ -113,4 +117,3 @@ function App() {
 }
 
 export default App;
-
