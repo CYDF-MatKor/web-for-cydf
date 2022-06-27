@@ -15,6 +15,7 @@ import {
 	ProfessorTier,
 	AcademicCalendar,
 	Busasu,
+	RandMenu,
 	Club,
 } from ".";
 
@@ -98,7 +99,7 @@ function App() {
 								element={<Busasu />}
 							/>
 						)}
-						{/* <Route path="/rand-menu" element={<RandMenu />} /> */}
+						<Route path="/rand-menu" element={<RandMenu />} />
 						<Route path="/club/:club" element={<Club />} />
 					</Routes>
 				) : // <Routes id="page-login-false">

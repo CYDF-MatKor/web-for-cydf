@@ -16,6 +16,7 @@ export { default as ProfessorInfo } from "./ProfessorComponent/ProfessorInfo";
 export { default as ProfessorTier } from "./ProfessorComponent/ProfessorTier";
 export { default as AcademicCalendar } from "./AcademicCalendar";
 export { default as Busasu } from "./Busasu";
+export { default as RandMenu } from "./RandMenu";
 export { default as Club } from "./Club";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
