@@ -1,14 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Error } from "./Error";
+export { default as Terms } from "./Terms";
+export { default as Home } from "./Home";
+export { default as Mypage } from "./Mypage";
+export { default as Timetable } from "./Timetable";
+export { default as Grade } from "./Grade";
+export { default as Lecture } from "./Lecture";
+export { default as LectureInfo } from "./LectureComponent/LectureInfo";
+export { default as LecturePastexam } from "./LectureComponent/LecturePastexam";
+export { default as LectureTier } from "./LectureComponent/LectureTier";
+export { default as ProfessorInfo } from "./ProfessorComponent/ProfessorInfo";
+export { default as ProfessorTier } from "./ProfessorComponent/ProfessorTier";
+export { default as AcademicCalendar } from "./AcademicCalendar";
+export { default as Busasu } from "./Busasu";
+export { default as RandMenu } from "./RandMenu";
+export { default as Club } from "./Club";
+export { default as Login } from "./Login";
+export { default as Signup } from "./Signup";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<React.StrictMode>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
