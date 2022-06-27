@@ -2,7 +2,21 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
-import { About, Contact, Error, Terms } from ".";
+import {
+	About,
+	Contact,
+	Error,
+	Terms,
+	Lecture,
+	LectureInfo,
+	LecturePastexam,
+	LectureTier,
+	ProfessorInfo,
+	ProfessorTier,
+	AcademicCalendar,
+	Busasu,
+	Club,
+} from ".";
 
 function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,53 +44,61 @@ function App() {
 						/>
 						{isLoggedIn && (
 							<Route
-								path="/lecture/:num/info"
+								path="/lecture/:num"
 								element={<LectureInfo />}
 							/>
 						)}
 						{isLoggedIn && (
 							<Route
-								path="/lecture/:num/pastexam"
+								path="/lecture/pastexam/:num"
 								element={<LecturePastexam />}
 							/>
 						)}
 						{isLoggedIn && (
 							<Route
-								path="/lecture/:num/tier"
+								path="/lecture/tier"
 								element={<LectureTier />}
 							/>
 						)}
 						{isLoggedIn && (
 							<Route
 								path="/professor/:num"
-								element={<Professor />}
-							/>
-						)}
 						{isLoggedIn && (
-							<Route
-								path="/professor/:num/info"
 								element={<ProfessorInfo />}
 							/>
 						)}
 						{isLoggedIn && (
 							<Route
-								path="/professor/:num/tier"
+								path="/professor/tier"
 								element={<ProfessorTier />}
 							/>
 						)}
 						{isLoggedIn && (
+						<Route
+							path="/academic-calendar/:year"
+							element={<AcademicCalendar />}
+						/>
+						<Route
+							path="/academic-calendar"
+							element={<Navigate to="/academic-calendar/2022" />}
+						/>
 							<Route
-								path="/academic-calendar/:year"
-								element={<AcademicCalendar />}
+								path="/%EB%B6%80%EC%82%AC%EC%88%98/:year/:semester"
+								element={<Busasu />}
 							/>
 						)}
 						{isLoggedIn && (
 							<Route
 								path="/부사수/:year/:semester"
-								element={<Substitute />}
+								element={<Busasu />}
 							/>
 						)}
 						<Route path="/rand-menu" element={<RandMenu />} />
+							<Route
+								path="/busasu/:year/:semester"
+								element={<Busasu />}
+							/>
+						)}
 						<Route path="/club/:club" element={<Club />} />
 					</Routes>
 				) : (

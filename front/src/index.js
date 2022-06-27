@@ -8,6 +8,15 @@ export { default as About } from "./About";
 export { default as Contact } from "./Contact";
 export { default as Error } from "./Error";
 export { default as Terms } from "./Terms";
+export { default as Lecture } from "./Lecture";
+export { default as LectureInfo } from "./LectureComponent/LectureInfo";
+export { default as LecturePastexam } from "./LectureComponent/LecturePastexam";
+export { default as LectureTier } from "./LectureComponent/LectureTier";
+export { default as ProfessorInfo } from "./ProfessorComponent/ProfessorInfo";
+export { default as ProfessorTier } from "./ProfessorComponent/ProfessorTier";
+export { default as AcademicCalendar } from "./AcademicCalendar";
+export { default as Busasu } from "./Busasu";
+export { default as Club } from "./Club";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
