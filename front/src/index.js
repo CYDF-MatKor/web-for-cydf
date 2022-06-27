@@ -4,6 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Error } from "./Error";
+export { default as Terms } from "./Terms";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
