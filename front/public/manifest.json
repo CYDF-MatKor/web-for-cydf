@@ -10,6 +10,10 @@
 		{
 			"src": "전자호랑이.png",
 			"type": "image/png"
+		},
+		{
+			"src": "electiger.png",
+			"type": "image/png"
 		}
 	],
 	"start_url": ".",
