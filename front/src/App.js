@@ -31,14 +31,13 @@ function App() {
 		<div className="App">
 			<div id="navbar">Navbar</div>
 			<div id="page">
-				<Routes id="page-login-common">
-					<Route path="/about" element={<About />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/error" element={<Error />} />
-					<Route path="/terms" element={<Terms />} />
-				</Routes>
 				{isLoggedIn ? (
 					<Routes id="page-login-true">
+						<Route path="/about" element={<About />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/error" element={<Error />} />
+						<Route path="/terms" element={<Terms />} />
+						{/* */}
 						<Route path="/" element={<Home />} />
 						<Route path="/home" element={<Home />} />
 						<Route path="/mypage" element={<Mypage />} />
@@ -110,6 +109,11 @@ function App() {
 					</Routes>
 				) : (
 					<Routes id="page-login-false">
+						<Route path="/about" element={<About />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/error" element={<Error />} />
+						<Route path="/terms" element={<Terms />} />
+						{/* */}
 						<Route path="/login" element={<Login />} />
 						<Route path="/signup" element={<Signup />} />
 						<Route path="/*" element={<Navigate to="/login" />} />
