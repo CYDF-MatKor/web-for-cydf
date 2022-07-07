@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import icon from "./navbaricon.png";
 
-function Navbar() {
+function Navbar({ isLoggedIn, isPaid }) {
 	return (
 		<div id="navbar">
 			<div id="navbar-main">
