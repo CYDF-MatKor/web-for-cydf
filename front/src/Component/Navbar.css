@@ -66,7 +66,8 @@
 	width: auto;
 }
 
-.navbar-main-middle-link {
+.navbar-main-middle-link,
+.navbar-main-right-link {
 	text-align: center;
 	text-decoration: none;
 	font-weight: bold;

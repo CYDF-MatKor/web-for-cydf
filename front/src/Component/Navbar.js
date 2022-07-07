@@ -28,7 +28,17 @@ function Navbar({ isLoggedIn, isPaid }) {
 						개인페이지
 					</Link>
 				</div>
-				<div id="navbar-main-right"></div>
+				<div id="navbar-main-right">
+					{isLoggedIn ? (
+						<Link className="navbar-main-right-link" to="/">
+							로그아웃
+						</Link>
+					) : (
+						<Link className="navbar-main-right-link" to="/">
+							로그인
+						</Link>
+					)}
+				</div>
 			</div>
 			<div id="navbar-sub">
 				<div id="navbar-sub-left"></div>
