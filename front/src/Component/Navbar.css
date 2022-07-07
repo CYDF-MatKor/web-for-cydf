@@ -36,10 +36,20 @@
 #navbar-sub-middle {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 
 	width: 70%;
+	height: 100%;
+}
+#navbar-main-right,
+#navbar-sub-right {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 20%;
 	height: 100%;
 }
 
