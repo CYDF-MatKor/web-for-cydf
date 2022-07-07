@@ -1,0 +1,11 @@
+#navbar {
+	background-color: #96001b;
+	box-shadow: 0px 0px 10px black;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 15px;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+}
