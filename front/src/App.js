@@ -22,6 +22,7 @@ import {
 	Club,
 	Login,
 	Signup,
+	Navbar,
 } from ".";
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
 	const [isPaid, setIsPaid] = useState(false);
 	return (
 		<div className="App">
-			<div id="navbar">Navbar</div>
+			<Navbar />
 			<div id="page">
 				{isLoggedIn ? (
 					<Routes id="page-login-true">
@@ -43,39 +44,20 @@ function App() {
 						<Route path="/mypage" element={<Mypage />} />
 						<Route path="/timetable" element={<Timetable />} />
 						<Route path="/grade" element={<Grade />} />
-						<Route
-							path="/lecture/description"
-							element={<Lecture />}
-						/>
-						{isPaid && (
-							<Route
-								path="/lecture/:num"
-								element={<LectureInfo />}
-							/>
-						)}
+						<Route path="/lecture/description" element={<Lecture />} />
+						{isPaid && <Route path="/lecture/:num" element={<LectureInfo />} />}
 						{isPaid && (
 							<Route
 								path="/lecture/pastexam/:num"
 								element={<LecturePastexam />}
 							/>
 						)}
+						{isPaid && <Route path="/lecture/tier" element={<LectureTier />} />}
 						{isPaid && (
-							<Route
-								path="/lecture/tier"
-								element={<LectureTier />}
-							/>
+							<Route path="/professor/:num" element={<ProfessorInfo />} />
 						)}
 						{isPaid && (
-							<Route
-								path="/professor/:num"
-								element={<ProfessorInfo />}
-							/>
-						)}
-						{isPaid && (
-							<Route
-								path="/professor/tier"
-								element={<ProfessorTier />}
-							/>
+							<Route path="/professor/tier" element={<ProfessorTier />} />
 						)}
 						<Route
 							path="/academic-calendar/:year"
@@ -92,16 +74,10 @@ function App() {
 							/>
 						)}
 						{isPaid && (
-							<Route
-								path="/부사수/:year/:semester"
-								element={<Busasu />}
-							/>
+							<Route path="/부사수/:year/:semester" element={<Busasu />} />
 						)}
 						{isPaid && (
-							<Route
-								path="/busasu/:year/:semester"
-								element={<Busasu />}
-							/>
+							<Route path="/busasu/:year/:semester" element={<Busasu />} />
 						)}
 						<Route path="/rand-menu" element={<RandMenu />} />
 						<Route path="/club/:club" element={<Club />} />

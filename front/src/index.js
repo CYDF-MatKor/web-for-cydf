@@ -25,6 +25,8 @@ export { default as Club } from "./Club";
 export { default as Login } from "./Login";
 export { default as Signup } from "./Signup";
 
+export { default as Navbar } from "./Component/Navbar";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
