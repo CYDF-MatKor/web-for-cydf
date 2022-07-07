@@ -32,6 +32,16 @@
 	width: 10%;
 	height: 100%;
 }
+#navbar-main-middle,
+#navbar-sub-middle {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 70%;
+	height: 100%;
+}
 
 #navbar-logo-link {
 	width: auto;
@@ -44,4 +54,11 @@
 #navbar-logo-img {
 	height: 100%;
 	width: auto;
+}
+
+.navbar-main-middle-link {
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
 }

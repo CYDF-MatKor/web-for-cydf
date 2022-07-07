@@ -11,7 +11,23 @@ function Navbar({ isLoggedIn, isPaid }) {
 						<img id="navbar-logo-img" src={icon} alt="logo" />
 					</Link>
 				</div>
-				<div id="navbar-main-middle"></div>
+				<div id="navbar-main-middle">
+					<Link className="navbar-main-middle-link" to="/">
+						소개
+					</Link>
+					<Link className="navbar-main-middle-link" to="/">
+						교수
+					</Link>
+					<Link className="navbar-main-middle-link" to="/">
+						강의
+					</Link>
+					<Link className="navbar-main-middle-link" to="/">
+						생활
+					</Link>
+					<Link className="navbar-main-middle-link" to="/">
+						개인페이지
+					</Link>
+				</div>
 				<div id="navbar-main-right"></div>
 			</div>
 			<div id="navbar-sub">
