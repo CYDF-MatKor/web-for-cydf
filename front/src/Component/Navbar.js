@@ -54,9 +54,7 @@ function Navbar({ isLoggedIn, isPaid, usrName }) {
 				</div>
 				<div id="navbar-main-right">
 					{isLoggedIn && (
-						<div className="navbar-main-right-name">
-							{usrName}김동우님 반갑습니다
-						</div>
+						<div className="navbar-main-right-name">{usrName}님 반갑습니다</div>
 					)}
 					{isLoggedIn && (
 						<Link className="navbar-main-right-link" to="/mypage">
