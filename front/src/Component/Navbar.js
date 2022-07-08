@@ -5,34 +5,50 @@ import icon from "./navbaricon.png";
 
 function Navbar({ isLoggedIn, isPaid, usrName }) {
 	const [isOpen, setIsOpen] = useState(false);
-
+	const openSubnavbar = () => setIsOpen(true);
+	const closeSubnavbar = () => setIsOpen(false);
 	return (
-		<div
-			id="navbar"
-			onMouseLeave={() => {
-				setIsOpen(false);
-			}}
-		>
+		<div id="navbar" onMouseLeave={closeSubnavbar}>
 			<div id="navbar-main">
 				<div id="navbar-main-left">
 					<Link id="navbar-logo-link" to="/">
 						<img id="navbar-logo-img" src={icon} alt="logo" />
 					</Link>
 				</div>
-				<div id="navbar-main-middle" onClick={() => setIsOpen(true)}>
-					<Link className="navbar-main-middle-link" to="/about">
+				<div id="navbar-main-middle">
+					<Link
+						className="navbar-main-middle-link"
+						onMouseEnter={openSubnavbar}
+						to="/about"
+					>
 						소개
 					</Link>
-					<Link className="navbar-main-middle-link" to="/professor/tier">
+					<Link
+						className="navbar-main-middle-link"
+						onMouseEnter={openSubnavbar}
+						to="/professor/tier"
+					>
 						교수
 					</Link>
-					<Link className="navbar-main-middle-link" to="/lecture/description">
+					<Link
+						className="navbar-main-middle-link"
+						onMouseEnter={openSubnavbar}
+						to="/lecture/description"
+					>
 						강의
 					</Link>
-					<Link className="navbar-main-middle-link" to="/academic-calendar">
+					<Link
+						className="navbar-main-middle-link"
+						onMouseEnter={openSubnavbar}
+						to="/academic-calendar"
+					>
 						생활
 					</Link>
-					<Link className="navbar-main-middle-link" to="/timetable">
+					<Link
+						className="navbar-main-middle-link"
+						onMouseEnter={openSubnavbar}
+						to="/timetable"
+					>
 						개인페이지
 					</Link>
 				</div>
