@@ -30,7 +30,7 @@ function App() {
 	const [isPaid, setIsPaid] = useState(false);
 	return (
 		<div className="App">
-			<Navbar />
+			<Navbar isLoggedIn={isLoggedIn} isPaid={isPaid} usrName={"김동우"} />
 			<div id="page">
 				{isLoggedIn ? (
 					<Routes id="page-login-true">
