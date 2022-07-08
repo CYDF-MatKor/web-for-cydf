@@ -16,41 +16,51 @@ function Navbar({ isLoggedIn, isPaid, usrName }) {
 					</Link>
 				</div>
 				<div id="navbar-main-middle">
-					<Link
-						className="navbar-main-middle-link"
-						onMouseEnter={openSubnavbar}
-						to="/about"
-					>
-						소개
-					</Link>
-					<Link
-						className="navbar-main-middle-link"
-						onMouseEnter={openSubnavbar}
-						to="/professor"
-					>
-						교수
-					</Link>
-					<Link
-						className="navbar-main-middle-link"
-						onMouseEnter={openSubnavbar}
-						to="/lecture"
-					>
-						강의
-					</Link>
-					<Link
-						className="navbar-main-middle-link"
-						onMouseEnter={openSubnavbar}
-						to="/academic-calendar"
-					>
-						생활
-					</Link>
-					<Link
-						className="navbar-main-middle-link"
-						onMouseEnter={openSubnavbar}
-						to="/timetable"
-					>
-						개인페이지
-					</Link>
+					<div style={{ width: "20%" }}>
+						<Link
+							className="navbar-main-middle-link"
+							onMouseEnter={openSubnavbar}
+							to="/about"
+						>
+							소개
+						</Link>
+					</div>
+					<div style={{ width: "20%" }}>
+						<Link
+							className="navbar-main-middle-link"
+							onMouseEnter={openSubnavbar}
+							to="/professor"
+						>
+							교수
+						</Link>
+					</div>
+					<div style={{ width: "20%" }}>
+						<Link
+							className="navbar-main-middle-link"
+							onMouseEnter={openSubnavbar}
+							to="/lecture"
+						>
+							강의
+						</Link>
+					</div>
+					<div style={{ width: "20%" }}>
+						<Link
+							className="navbar-main-middle-link"
+							onMouseEnter={openSubnavbar}
+							to="/academic-calendar"
+						>
+							생활
+						</Link>
+					</div>
+					<div style={{ width: "20%" }}>
+						<Link
+							className="navbar-main-middle-link"
+							onMouseEnter={openSubnavbar}
+							to="/timetable"
+						>
+							개인페이지
+						</Link>
+					</div>
 				</div>
 				<div id="navbar-main-right">
 					{isLoggedIn && (
