@@ -26,14 +26,14 @@ function Navbar({ isLoggedIn, isPaid, usrName }) {
 					<Link
 						className="navbar-main-middle-link"
 						onMouseEnter={openSubnavbar}
-						to="/professor/tier"
+						to="/professor"
 					>
 						교수
 					</Link>
 					<Link
 						className="navbar-main-middle-link"
 						onMouseEnter={openSubnavbar}
-						to="/lecture/description"
+						to="/lecture"
 					>
 						강의
 					</Link>
@@ -75,7 +75,57 @@ function Navbar({ isLoggedIn, isPaid, usrName }) {
 			</div>
 			<div id="navbar-sub" style={isOpen ? {} : { height: 0 }}>
 				<div id="navbar-sub-left"></div>
-				<div id="navbar-sub-middle"></div>
+				<div id="navbar-sub-middle">
+					<div class="navbar-sub-middle-container">
+						<Link className="navbar-sub-middle-link" to="/about">
+							소개
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/contact">
+							연락
+						</Link>
+					</div>
+					<div class="navbar-sub-middle-container">
+						<Link className="navbar-sub-middle-link" to="/professor">
+							교수 소개
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/professor/tier">
+							교수 티어
+						</Link>
+					</div>
+					<div class="navbar-sub-middle-container">
+						<Link className="navbar-sub-middle-link" to="/lecture">
+							과목 정보
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/lecture/tier">
+							과목 티어
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/lecture/description">
+							수강신청방법
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/부사수">
+							부사수
+						</Link>
+					</div>
+					<div class="navbar-sub-middle-container">
+						<Link className="navbar-sub-middle-link" to="/academic-calendar">
+							학사일정
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/club">
+							동아리
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/rand-menu">
+							식사메뉴추천
+						</Link>
+					</div>
+					<div class="navbar-sub-middle-container">
+						<Link className="navbar-sub-middle-link" to="/timetable">
+							시간표
+						</Link>
+						<Link className="navbar-sub-middle-link" to="/grade">
+							성적
+						</Link>
+					</div>
+				</div>
 				<div id="navbar-sub-right"></div>
 			</div>
 		</div>
