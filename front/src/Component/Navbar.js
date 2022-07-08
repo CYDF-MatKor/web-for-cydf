@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import icon from "./navbaricon.png";
 
-function Navbar({ isLoggedIn, isPaid }) {
+function Navbar({ isLoggedIn, isPaid, usrName }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
@@ -20,29 +20,40 @@ function Navbar({ isLoggedIn, isPaid }) {
 					</Link>
 				</div>
 				<div id="navbar-main-middle" onClick={() => setIsOpen(true)}>
-					<Link className="navbar-main-middle-link" to="/">
+					<Link className="navbar-main-middle-link" to="/about">
 						소개
 					</Link>
-					<Link className="navbar-main-middle-link" to="/">
+					<Link className="navbar-main-middle-link" to="/professor/tier">
 						교수
 					</Link>
-					<Link className="navbar-main-middle-link" to="/">
+					<Link className="navbar-main-middle-link" to="/lecture/description">
 						강의
 					</Link>
-					<Link className="navbar-main-middle-link" to="/">
+					<Link className="navbar-main-middle-link" to="/academic-calendar">
 						생활
 					</Link>
-					<Link className="navbar-main-middle-link" to="/">
+					<Link className="navbar-main-middle-link" to="/timetable">
 						개인페이지
 					</Link>
 				</div>
 				<div id="navbar-main-right">
-					{isLoggedIn ? (
-						<Link className="navbar-main-right-link" to="/">
-							로그아웃
+					{isLoggedIn && (
+						<div className="navbar-main-right-name">
+							{usrName}김동우님 반갑습니다
+						</div>
+					)}
+					{isLoggedIn && (
+						<Link className="navbar-main-right-link" to="/mypage">
+							마이페이지
 						</Link>
-					) : (
-						<Link className="navbar-main-right-link" to="/">
+					)}
+					{isLoggedIn && (
+						<div className="navbar-main-right-link" to="/mypage">
+							로그아웃
+						</div>
+					)}
+					{!isLoggedIn && (
+						<Link className="navbar-main-right-link" to="/login">
 							로그인
 						</Link>
 					)}
